@@ -2,37 +2,104 @@
 <html lang=eng>
 
 <head>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="css/site.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <header>
-        <h1>ACME Car Rental</h1>
-    </header>
+    <div class="row">
+        <div class="col">
+            <header>
+                <h1>ACME Car Rental</h1>
+            </header>
+        </div>
+    </div>
+
 
     <main>
 
         <!--pickup date and # of days-->
 
+        <div class="row">
+            <div class="col">
+                <label>Pickup Date:</label>
+                <input id="inputPickpuDate" type="date">
+            </div>
+        </div>
 
+
+        <div class="row">
+            <div class="col">
+                <label>Number of days:</label>
+                <input id="inputNumOfDays" type="number" value="1">
+            </div>
+        </div>
 
 
         <!--options-->
-        <h3>Options:</h3>
-        <input type="checkbox" id="check1" value="Bike">
-        <label for="check1">Electronic Toll Tag ($3.95/day)</label><br>
+        <div class="row">
+            <div class="col">
+                <h2>Options:</h2>
+                <div>
+                    <input id="checkbox1" type="checkbox" value="Bike">
+                    <label for="check1">Electronic Toll Tag ($3.95/day)</label>
 
+                    <input id="checkbox2" type="checkbox" value="Bike">
+                    <label for="check1">GPS ($2.95/day)</label>
 
+                    <input id="checkbox2" type="checkbox" value="Bike">
+                    <label for="check1">Roadside Assistance ($2.95/day)</label>
+                </div>
+            </div>
+        </div>
 
         <!--under 25-->
 
+        <div class="row">
+            <div class="col">
+                <h2>Under 25</h2>
+                <div>
+                    <input id="inputUnder25NoRadio" type="radio" name="under25" value="no">
+                    <label>No</label>
 
+                    <input id="inputUnder25YesRadio" type="radio" name="under25" value="yes">
+                    <label>Yes</label>
+                </div>
+            </div>
+        </div>
 
+        <div class="row my=3">
+            <div class="col">
+                <input type="button" value="Estimate Total Cost">
+                <button type="button">Estimate Total Cost</button>
+            </div>
+            <div>
 
-        <!--calculator?-->
-
-
+                <div class="row">
+                    <div class="col">
+                        <div>
+                            <label>Car rental:</label>
+                            <span id="outputCarRental">xxx.xx</span>
+                        </div>
+                        <div>
+                            <label>Options:</label>
+                            <span id="outputOptions">xxx.xx</span>
+                        </div>
+                        <div>
+                            <label>Under 25 surcharge:</label>
+                            <span id="outputSurcharge">xxx.xx</span>
+                        </div>
+                        <div>
+                            <label>Total Due:</label>
+                            <span id="outputTotal">xxx.xx</span>
+                        </div>
+                    </div>
+                </div>
 
     </main>
 
